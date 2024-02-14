@@ -1,4 +1,9 @@
-
+entity AppUser{
+	userId UUID,
+    name String,
+    bdate Instant,
+    
+}
 entity Region {
 	regionName String
 }

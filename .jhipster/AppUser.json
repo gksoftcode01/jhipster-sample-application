@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "changelogDate": "20240213133740"
+  },
+  "applications": "*",
+  "entityTableName": "app_user",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bdate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "AppUser",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
