@@ -1,5 +1,9 @@
 <template>
   <div>
+    <b-dropdown-item to="/app-user">
+      <font-awesome-icon icon="asterisk" />
+      <span>App User</span>
+    </b-dropdown-item>
     <b-dropdown-item to="/region">
       <font-awesome-icon icon="asterisk" />
       <span>Region</span>

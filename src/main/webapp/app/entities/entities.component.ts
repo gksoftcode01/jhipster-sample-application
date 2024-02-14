@@ -1,5 +1,6 @@
 import { defineComponent, provide } from 'vue';
 
+import AppUserService from './app-user/app-user.service';
 import RegionService from './region/region.service';
 import CountryService from './country/country.service';
 import LocationService from './location/location.service';
@@ -16,6 +17,7 @@ export default defineComponent({
   name: 'Entities',
   setup() {
     provide('userService', () => new UserService());
+    provide('appUserService', () => new AppUserService());
     provide('regionService', () => new RegionService());
     provide('countryService', () => new CountryService());
     provide('locationService', () => new LocationService());

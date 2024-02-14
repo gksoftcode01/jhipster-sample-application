@@ -3,6 +3,10 @@ import { Authority } from '@/shared/security/authority';
 // prettier-ignore
 const Entities = () => import('@/entities/entities.vue');
 
+const AppUser = () => import('@/entities/app-user/app-user.vue');
+const AppUserUpdate = () => import('@/entities/app-user/app-user-update.vue');
+const AppUserDetails = () => import('@/entities/app-user/app-user-details.vue');
+
 const Region = () => import('@/entities/region/region.vue');
 const RegionUpdate = () => import('@/entities/region/region-update.vue');
 const RegionDetails = () => import('@/entities/region/region-details.vue');
@@ -41,6 +45,30 @@ export default {
   path: '/',
   component: Entities,
   children: [
+    {
+      path: 'app-user',
+      name: 'AppUser',
+      component: AppUser,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'app-user/new',
+      name: 'AppUserCreate',
+      component: AppUserUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'app-user/:appUserId/edit',
+      name: 'AppUserEdit',
+      component: AppUserUpdate,
+      meta: { authorities: [Authority.USER] },
+    },
+    {
+      path: 'app-user/:appUserId/view',
+      name: 'AppUserView',
+      component: AppUserDetails,
+      meta: { authorities: [Authority.USER] },
+    },
     {
       path: 'region',
       name: 'Region',
